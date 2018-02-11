@@ -182,11 +182,11 @@ module BeautifulScaffoldCommonMethods
   def require_gems
     gems = {
       'will_paginate' => nil, # v 3.1.5
-      'ransack' => '1.8.4',
-      'polyamorous' => '1.3.1',
+      'ransack' => '~> 1.8.4',
+      'polyamorous' => '~> 1.3.3',
       'jquery-ui-rails' => nil,
-      'prawn' => '2.1.0',
-      'prawn-table' => '0.2.2',
+      'prawn' => '~> 2.2',
+      'prawn-table' => '~> 0.2.2',
       'sanitize' => nil,
       'twitter-bootstrap-rails' => '3.2.2',
       'font-awesome-rails' => '4.7.0.2',
