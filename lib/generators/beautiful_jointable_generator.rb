@@ -21,12 +21,12 @@ class BeautifulJointableGenerator < Rails::Generators::Base
 
     # Generate migration
     migration_content = "
-    create_table join_table_name, :id => false do |t|
+    create_table :#{join_table_name}, :id => false do |t|
       t.integer :#{sorted_model[0]}_id
       t.integer :#{sorted_model[1]}_id
     end
 
-    add_index join_table_name, [:#{sorted_model[0]}_id, :#{sorted_model[1]}_id]
+    add_index :#{join_table_name}, [:#{sorted_model[0]}_id, :#{sorted_model[1]}_id]
     "
 
     migration_name = "create_join_table_for_#{sorted_model[0]}_and_#{sorted_model[1]}"
