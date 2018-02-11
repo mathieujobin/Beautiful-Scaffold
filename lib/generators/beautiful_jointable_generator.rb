@@ -13,7 +13,7 @@ class BeautifulJointableGenerator < Rails::Generators::Base
       sorted_model = join_models.sort
     elsif join_models.length == 2 then
       sorted_model = join_models.sort
-      join_table_name = :#{sorted_model[0].pluralize}_#{sorted_model[1].pluralize}
+      join_table_name = "#{sorted_model[0].pluralize}_#{sorted_model[1].pluralize}"
     else
       say_status("Error", "Error need two singular models : example : user product [join_table_name]", :red)
       exit 1
